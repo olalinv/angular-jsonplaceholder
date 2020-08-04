@@ -1,0 +1,28 @@
+<div class="page-wrapper">
+  <!-- Header -->
+  <header>
+    <div class="toolbar" role="banner">
+      <div fxLayout="row" fxLayoutAlign="space-between center">
+        <a href="/">
+          <h1>Angular JSONPlaceHolder</h1>
+        </a>
+        <a mat-raised-button routerLink="post/add" title="Crear entrada">
+          <mat-icon aria-label="Crear entrada">post_add</mat-icon>
+          Añadir
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="content" role="main">
+    <div class="main-inner">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    Angular JSONPlaceHolder, 2020
+  </footer>
+</div>

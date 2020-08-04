@@ -1,0 +1,21 @@
+<section class="section-wrapper">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title fxLayout="row" fxLayoutAlign="space-between center">
+        <span>¿Desea eliminar la entrada <i>{{post.title}}</i>?</span>
+        <div class="actions-menu">
+          <button matTooltip="Ir atrás" mat-icon-button routerLink="../../../">
+            <mat-icon aria-label="Ir atrás">arrow_back</mat-icon>
+          </button>
+        </div>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Se perderá la entrada seleccionada. Esta acción no se puede deshacer.</p>
+      <button mat-raised-button color="warn" (click)="deletePost()">
+        <mat-icon>delete</mat-icon>
+        Eliminar
+      </button>
+    </mat-card-content>
+  </mat-card>
+</section>

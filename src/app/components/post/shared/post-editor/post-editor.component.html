@@ -1,0 +1,22 @@
+<form [formGroup]="editorPostForm" (ngSubmit)="onSubmitEditorPostForm()" novalidate>
+  <mat-form-field>
+    <input matInput formControlName="title" id="title" placeholder="Título" required>
+    <div *ngIf="isSubmitted && form.title.errors">
+      <mat-error *ngIf="form.title.errors.required">{{ getErrorMessage('required') }}</mat-error>
+    </div>
+  </mat-form-field>
+  <br><br>
+  <mat-form-field>
+    <textarea matInput formControlName="body" id="body" cdkTextareaAutosize #autosize="cdkTextareaAutosize"
+      cdkAutosizeMinRows="1" cdkAutosizeMaxRows="50" placeholder="Cuerpo..." required></textarea>
+    <mat-error *ngIf="body.invalid">{{ getErrorMessage(body) }}</mat-error>
+  </mat-form-field>
+  <div *ngIf="isSubmitted && form.body.errors">
+    <mat-error *ngIf="form.body.errors.required">{{ getErrorMessage('required') }}
+    </mat-error>
+  </div>
+  <button mat-raised-button class="button-save">
+    <mat-icon>save</mat-icon>
+    Guardar
+  </button>
+</form>

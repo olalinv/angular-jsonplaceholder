@@ -1,0 +1,36 @@
+/*------------------------------------------------------------------
+[Post List]
+-------------------------------------------------------------------*/
+
+:host {
+  ::ng-deep {
+    .section-wrapper {
+      .section-content {
+        .mat-card {
+          margin: 1rem;
+          a {
+            color: inherit;
+          }
+          .mat-card-actions {
+            margin: 0;
+            padding: 0;
+          }
+          .mat-card-header-text {
+            margin: 0;
+          }
+          .mat-card-image {
+            max-height: 120px;
+            object-fit: cover;
+            object-position: center top;
+            @media (min-width: 1280px) {
+              max-height: 150px;
+            }
+          }
+          .mat-card-subtitle {
+            font-size: smaller;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<section class="section-wrapper">
+  <h2 class="section-title">{{post.title}}</h2>
+  <div class="section-content">
+    <div class="post-author">por: user{{post.userId}}</div>
+    <img class="post-image" src="https://picsum.photos/1200/600?random={{post.id}}" loading="lazy" width="1200"
+      height="600" alt="Imagen {{post.id}}">
+    <div class="post-body">
+      {{post.body}}
+    </div>
+  </div>
+</section>

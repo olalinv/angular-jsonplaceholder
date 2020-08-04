@@ -1,0 +1,24 @@
+/*------------------------------------------------------------------
+[Post Detail]
+-------------------------------------------------------------------*/
+
+:host {
+  ::ng-deep {
+    .section-wrapper {
+      .section-content {
+        .post-author {
+          color: var(--gray-color);
+          font-size: smaller;
+        }
+        .post-image {
+          height: auto;
+          margin: 1rem 0;
+          max-width: 100%;
+        }
+      }
+      .section-title {
+        margin: 0;
+      }
+    }
+  }
+}

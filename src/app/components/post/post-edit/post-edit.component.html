@@ -1,0 +1,17 @@
+<section class="section-wrapper">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title fxLayout="row" fxLayoutAlign="space-between center">
+        <span>Editar entrada</span>
+        <div class="actions-menu">
+          <button matTooltip="Ir atrás" mat-icon-button routerLink="../../../">
+            <mat-icon aria-label="Ir atrás">arrow_back</mat-icon>
+          </button>
+        </div>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <app-post-editor [id]="id"></app-post-editor>
+    </mat-card-content>
+  </mat-card>
+</section>
