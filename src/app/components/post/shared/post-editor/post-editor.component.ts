@@ -35,9 +35,7 @@ export class PostEditorComponent implements OnInit {
     this.initEditorPostForm();
   }
 
-  get form() { return this.editorPostForm.controls; }
-  get title() { return this.editorPostForm.get('title').value; }
-  get body() { return this.editorPostForm.get('body').value; }
+  get form(): any { return this.editorPostForm.controls; }
 
   ngOnInit(): void {
     if (this.id) {
@@ -63,7 +61,7 @@ export class PostEditorComponent implements OnInit {
     });
   }
 
-  preparePost = (values: Object) => {
+  preparePost = (values: object) => {
     Object.assign(this.post, values);
   }
 
@@ -76,8 +74,8 @@ export class PostEditorComponent implements OnInit {
   }
 
   fillEditorPostForm = () => {
-    this.editorPostForm.controls['title'].setValue(this.post.title);
-    this.editorPostForm.controls['body'].setValue(this.post.body);
+    this.editorPostForm.controls.title.setValue(this.post.title);
+    this.editorPostForm.controls.body.setValue(this.post.body);
   }
 
   onSubmitEditorPostForm = () => {

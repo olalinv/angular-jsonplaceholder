@@ -17,8 +17,10 @@
         background-color: var(--gray-light-color);
         padding: 1rem;
         .toolbar {
-          margin: 0 auto;
-          max-width: 85%;
+          @media (min-width: 600px) {
+            margin: 0 auto;
+            width: 85%;
+          }
           a {
             margin: 0 2rem;
             h1 {
@@ -29,8 +31,10 @@
       }
       main {
         flex: 1 0 auto;
-        margin: 0 auto;
-        width: 85%;
+        @media (min-width: 600px) {
+          margin: 0 auto;
+          width: 85%;
+        }
         .main-inner {
           margin: 2rem 3rem;
         }

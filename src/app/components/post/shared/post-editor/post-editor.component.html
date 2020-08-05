@@ -9,11 +9,10 @@
   <mat-form-field>
     <textarea matInput formControlName="body" id="body" cdkTextareaAutosize #autosize="cdkTextareaAutosize"
       cdkAutosizeMinRows="1" cdkAutosizeMaxRows="50" placeholder="Cuerpo..." required></textarea>
-    <mat-error *ngIf="body.invalid">{{ getErrorMessage(body) }}</mat-error>
+    <mat-error *ngIf="form.body.invalid">{{ getErrorMessage(form.body) }}</mat-error>
   </mat-form-field>
   <div *ngIf="isSubmitted && form.body.errors">
-    <mat-error *ngIf="form.body.errors.required">{{ getErrorMessage('required') }}
-    </mat-error>
+    <mat-error *ngIf="form.body.errors.required">{{ getErrorMessage('required') }}</mat-error>
   </div>
   <button mat-raised-button class="button-save">
     <mat-icon>save</mat-icon>
